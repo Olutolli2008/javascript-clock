@@ -1,7 +1,7 @@
 var wakeuptime;
 var dstime;
 var sleeptime;
-car noon = 12;
+var noon = 12;
 
 function showCurrentTime(){
 
@@ -41,4 +41,24 @@ function changeImage(){
     else if(time==dstime){
         image="img/class.gif"
     }
+
+    imageHTML.src =image;
+    console.log(imageHTML.src);
 }
+
+function uptadeClock(){
+    var WakeupTimeSelector =document.getElementById("wakeUpTimeSelector");
+    wakeuptime =WakeupTimeSelector.value;
+
+
+    var dsTimeSelector = document.getElementById("dsTimeSelector");
+    var dstime =dsTimeSelector.value;
+
+    var sleepTimeSelector = document.getElementById("sleepTimeSelector");
+    var sleeptime = sleepTimeSelector.value;
+
+
+}
+
+var saveButton =document.getElementById("saveButton");
+saveButoon.addEventListener("click" , uptadeClock);
